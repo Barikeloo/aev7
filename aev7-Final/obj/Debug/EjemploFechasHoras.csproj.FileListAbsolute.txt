@@ -1,0 +1,58 @@
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csprojAssemblyReference.cache
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.Frmppal.resources
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.Properties.Resources.resources
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.GenerateResource.cache
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.CoreCompileInputs.cache
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\bin\Debug\EjemploFechasHoras.exe.config
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\bin\Debug\EjemploFechasHoras.exe
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\bin\Debug\EjemploFechasHoras.pdb
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\bin\Debug\MySql.Data.dll
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\bin\Debug\Google.Protobuf.dll
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\bin\Debug\MySql.Data.xml
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.CopyComplete
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.exe
+C:\Users\Salva\Desktop\Desarrollos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.pdb
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\bin\Debug\EjemploFechasHoras.exe.config
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\bin\Debug\EjemploFechasHoras.exe
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\bin\Debug\EjemploFechasHoras.pdb
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\bin\Debug\Google.Protobuf.dll
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\bin\Debug\MySql.Data.xml
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.AssemblyReference.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.SuggestedBindingRedirects.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.Frmppal.resources
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.Properties.Resources.resources
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.GenerateResource.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.CoreCompileInputs.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.csproj.CopyComplete
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.exe
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\EjemploFechasHoras\obj\Debug\EjemploFechasHoras.pdb
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\bin\Debug\EjemploFechasHoras.exe.config
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\bin\Debug\EjemploFechasHoras.exe
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\bin\Debug\EjemploFechasHoras.pdb
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\bin\Debug\Google.Protobuf.dll
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\bin\Debug\MySql.Data.xml
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.AssemblyReference.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.SuggestedBindingRedirects.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.Frmppal.resources
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.Login.resources
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.Properties.Resources.resources
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.GenerateResource.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.CoreCompileInputs.cache
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.CopyComplete
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.exe
+C:\Users\rumiro\Desktop\CLASES\programacion\c#\ejercicios\Acceso A datos\aev7-Final\obj\Debug\EjemploFechasHoras.pdb
+C:\Users\34639\Desktop\aev7-Final\bin\Debug\EjemploFechasHoras.exe.config
+C:\Users\34639\Desktop\aev7-Final\bin\Debug\EjemploFechasHoras.exe
+C:\Users\34639\Desktop\aev7-Final\bin\Debug\EjemploFechasHoras.pdb
+C:\Users\34639\Desktop\aev7-Final\bin\Debug\Google.Protobuf.dll
+C:\Users\34639\Desktop\aev7-Final\bin\Debug\MySql.Data.xml
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.AssemblyReference.cache
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.SuggestedBindingRedirects.cache
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.Frmppal.resources
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.Login.resources
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.Properties.Resources.resources
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.GenerateResource.cache
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.CoreCompileInputs.cache
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.csproj.CopyComplete
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.exe
+C:\Users\34639\Desktop\aev7-Final\obj\Debug\EjemploFechasHoras.pdb
