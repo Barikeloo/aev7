@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace EjemploFechasHoras
@@ -18,7 +20,7 @@ namespace EjemploFechasHoras
         public string Nif { get { return nif; } }
         public string Nombre { get { return nombre; } }
         public string Apellido { get { return apellido; } }
-        public bool Admin { get { return admin; } }
+        //public bool Admin { get { return admin; } }
         public string Clave { get { return clave; } }
 
 
@@ -84,74 +86,29 @@ namespace EjemploFechasHoras
             return retorno;
         }
 
-        public static List<Empleado> ListarEmpleados()
+        //public static List<Empleado> ListarEmpleados()
+        //{
+        //    List<Empleado> lista = new List<Empleado>();
+        //    string consulta = "SELECT * FROM empleados";
+        //    MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+        //    MySqlDataReader reader = comando.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        Empleado emp = new Empleado(reader.GetString("nif"), reader.GetString("nombre"), reader.GetString("apellido"), reader.GetBoolean("admin"), reader.GetString("clave"));
+        //        lista.Add(emp);
+        //    }
+        //    reader.Close();
+        //    return lista;
+        //}
+
+        public static DataTable listarEmpleados()
         {
-            List<Empleado> lista = new List<Empleado>();
             string consulta = "SELECT * FROM empleados";
             MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-            while (reader.Read())
-            {
-                Empleado emp = new Empleado(reader.GetString("nif"), reader.GetString("nombre"), reader.GetString("apellido"), reader.GetBoolean("admin"), reader.GetString("clave"));
-                lista.Add(emp);
-            }
-            reader.Close();
-            return lista;
-        }
-
-        public static int FicharEntrada(string nif, string hora, DateTime dia)
-        {
-            int retorno;
-            string consulta = String.Format("INSERT INTO fichajes (Empleado_nif, dia, HoraEntrada) VALUES ('{0}', '{1}', '{2}')", nif, dia.ToString("yyyy-MM-dd"), hora);
-            MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-            retorno = comando.ExecuteNonQuery();
-            return retorno;
-        }
-
-        public static int FicharSalida(string nif, string hora, DateTime dia)
-        {
-            int retorno;
-            string consulta = String.Format("UPDATE fichajes SET HoraSalida = '{0}', finalizado = true WHERE Empleado_nif = '{1}' AND dia = '{2}'", hora, nif, dia.ToString("yyyy-MM-dd"));
-
-            MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-
-            retorno = comando.ExecuteNonQuery();
-
-            return retorno;
-        }
-
-        public static bool comprobarEntrada(string nif) //Comprueba si el empleado ya ha fichado entrada
-        {
-            string consulta = String.Format("SELECT * FROM fichajes WHERE Empleado_nif = '{0}' AND dia = '{1}'", nif, DateTime.Now.ToString("yyyy-MM-dd"));
-            MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.Read())
-            {
-                reader.Close();
-                return true;
-            }
-            else
-            {
-                reader.Close();
-                return false;
-            }
-        }
-
-        public static bool comprobarSalida(string nif) //Comprueba si el empleado ya ha fichado salida
-        {
-            string consulta = String.Format("SELECT * FROM fichajes WHERE Empleado_nif = '{0}' AND dia = '{1}' AND HoraSalida IS NOT NULL", nif, DateTime.Now.ToString("yyyy-MM-dd"));
-            MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.Read())
-            {
-                reader.Close();
-                return true;
-            }
-            else
-            {
-                reader.Close();
-                return false;
-            }
+            MySqlDataAdapter da = new MySqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
 
         public static int borrarEmpleado(string nif)
@@ -185,6 +142,45 @@ namespace EjemploFechasHoras
             }
             reader.Close();
             return lista;
+        }
+
+        // funcion de login
+        public static bool Login(string nif, string clave)
+        {
+            ConBD.CerrarConexion();
+            ConBD.Conexion.Open();
+            string consulta = String.Format("SELECT * FROM empleados WHERE nif = '{0}' AND clave = '{1}'", nif, clave);
+            MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
+        }
+
+        public static bool Admin(string dni)
+        {
+            ConBD.CerrarConexion();
+            ConBD.Conexion.Open();
+            string consulta = String.Format("SELECT * FROM empleados WHERE nif = '{0}' AND administrador = true", dni);
+            MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
         }
     }
 }

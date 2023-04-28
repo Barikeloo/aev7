@@ -26,9 +26,10 @@ namespace EjemploFechasHoras
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                dgvFichajes.DataSource = Fichaje.ListadoFichajes();
-                dgvFichajes.Columns[0].Visible = false;
+                
+                dgvFichajes.Visible = false;
                 txtMessage.Visible = false;
+                grpbPermanencias.Visible = false;
                 ConBD.CerrarConexion();
 
             }
@@ -63,7 +64,7 @@ namespace EjemploFechasHoras
                         lista = Empleado.BuscarEmpleado(txtNif.Text);
                         if (lista.Count > 0 && lista[0].Nif == txtNif.Text)
                         {
-                            if (Empleado.comprobarEntrada(txtNif.Text))
+                            if (Fichaje.comprobarEntrada(txtNif.Text))
                             {
                                 txtMessage.Visible = true;
                                 ptbFlorida.Visible = false;
@@ -71,7 +72,7 @@ namespace EjemploFechasHoras
                             }
                             else
                             {
-                                Empleado.FicharEntrada(txtNif.Text, lblHora.Text, tiempo);
+                                Fichaje.FicharEntrada(txtNif.Text, lblHora.Text, tiempo);
                                 txtMessage.Visible = true;
                                 ptbFlorida.Visible = false;
                                 txtMessage.Text = "Empleado ha entrado correctamente";
@@ -118,7 +119,7 @@ namespace EjemploFechasHoras
                         lista = Empleado.BuscarEmpleado(txtNif.Text);
                         if (lista.Count > 0 && lista[0].Nif == txtNif.Text)
                         {
-                            if (Empleado.comprobarSalida(txtNif.Text))
+                            if (Fichaje.comprobarSalida(txtNif.Text))
                             {
                                 txtMessage.Visible = true;
                                 ptbFlorida.Visible = false;
@@ -126,7 +127,7 @@ namespace EjemploFechasHoras
                             }
                             else
                             {
-                                Empleado.FicharSalida(txtNif.Text, lblHora.Text, tiempo);
+                                Fichaje.FicharSalida(txtNif.Text, lblHora.Text, tiempo);
                                 txtMessage.Visible = true;
                                 ptbFlorida.Visible = false;
                                 txtMessage.Text = "El empleado ha salido";
@@ -164,7 +165,6 @@ namespace EjemploFechasHoras
                     txtMessage.Visible = true;
                     ptbFlorida.Visible = false;
                     txtMessage.Text = mensaje;
-
                 }
                 else
                 {
@@ -180,6 +180,57 @@ namespace EjemploFechasHoras
                 ConBD.CerrarConexion();
             }
 
+        }
+
+        private void btnMantenimiento_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
+            if (login.DialogResult == DialogResult.OK)
+            {
+                grpbPermanencias.Visible = true;
+                dgvFichajes.Visible = true;
+                txtMessage.Visible = false;
+                ptbFlorida.Visible = true;
+            }
+        }
+
+        private void btnVerPermanencia_Click(object sender, EventArgs e)
+        {
+            // Obtén las fechas seleccionadas por el usuario
+            DateTime fechaInicio = dtpFecha1.Value;
+            DateTime fechaFin = dtpFecha2.Value;
+            string nif = txtNif.Text;
+
+            // Valida que la fecha de inicio sea menor o igual que la fecha de fin
+            if (fechaInicio > fechaFin)
+            {
+                MessageBox.Show("La fecha de inicio debe ser menor o igual que la fecha de fin");
+                return;
+            } else
+            {
+                List<Fichaje> permanencias = Fichaje.Permanencia(nif, fechaInicio, fechaFin);
+                dgvFichajes.DataSource = permanencias;
+                dgvFichajes.Columns[0].Visible = true;
+
+                ptbFlorida.Visible = false;
+
+            }
+
+        }
+
+        private void btnSalirPermanencias_Click(object sender, EventArgs e)
+        {
+            grpbPermanencias.Visible = false;
+            dgvFichajes.Visible = false;
+            ptbFlorida.Visible = true;
+        }
+
+        private void btnPermanencia_Click(object sender, EventArgs e)
+        {
+            grpbPermanencias.Visible = true;
+            dgvFichajes.Visible = true;
+            ptbFlorida.Visible = false;
         }
     }
 }

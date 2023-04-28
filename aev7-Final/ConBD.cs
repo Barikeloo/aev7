@@ -41,7 +41,7 @@ namespace EjemploFechasHoras
                         string port = "port=3306;";
                         string database = "database=aev7;";
                         string usuario = "uid=root;";
-                        string password = "pwd=barikelo;";
+                        string password = "pwd=;";
                         instancia.ConnectionString = server + port + database + usuario + password;
                     }
                     // Se devuelve la instancia de conexión a la base de datos.
