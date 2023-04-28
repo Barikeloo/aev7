@@ -71,17 +71,11 @@ namespace EjemploFechasHoras
 
         }
 
-        public static int InsertarEmpleado(Empleado emp)
+        public static int InsertarEmpleado(string nif, string nombre, string apellido, bool admin, string clave)
         {
             int retorno;
-            string consulta = "INSERT INTO empleados (nif,nombre,apellido,direccion,admin,clave) " +
-                              "VALUES (@Nif, @Nombre,@Apellido,@Direccion,@Admin, @Clave)";
+            string consulta = String.Format("INSERT INTO empleados VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", nif, nombre, apellido, admin, clave);
             MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-            comando.Parameters.AddWithValue("Nif", emp.nif);
-            comando.Parameters.AddWithValue("Nombre", emp.nombre);
-            comando.Parameters.AddWithValue("Apellido", emp.apellido);
-            comando.Parameters.AddWithValue("Admin", emp.admin);
-            comando.Parameters.AddWithValue("Clave", emp.clave);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }

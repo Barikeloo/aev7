@@ -19,6 +19,7 @@ namespace EjemploFechasHoras
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            ConBD.AbrirConexion();
             string nif = txtNifLogin.Text;
             string clave = txtContra.Text;
             bool admin = Empleado.Admin(nif);
